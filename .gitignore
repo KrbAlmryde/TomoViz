@@ -4,3 +4,4 @@ node_modules
 Notes
 data
 *.sublime-workspace
+.DS_STORE
