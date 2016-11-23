@@ -1,14 +1,89 @@
+<!-- This is TomoViz interface -->
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Welcome to TomoViz</title>
-</head>
-<body>
-    <div id="anchor">
-        <!-- This is our starting point -->
-    </div>
-    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="./js/app.js"></script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="This is interface for TomoViz Remote rendering application">
+    <meta name="author" content="Shiwangi Singh, Kyle Amlryde">
 
+    <title>ParaViewWeb TomoViz</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/tomoviz.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+          <div></div>
+          <!--
+          <p>
+          <img alt="icon" src="../src/logo.png" data-holder-rendered="true" style="width: 50px; height: 40px;">
+          </p>
+          -->
+          <p class="top-bar">TomoViz</p>
+
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Welcome!</h1>
+        <p>This is ParaViewWeb application interface for Remote Rendering of Tomographic Reconstructions. This application supports multi-user real-time interaction using ParaView's Visualizer framework. </p>
+        <p><a class="btn btn-primary btn-lg" href="https://github.com/shiwangi27/visualizer" role="button">GitHub &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Agar</h2>
+          <p>
+          <img class="img-thumbnail" alt="static image data" src="./images/agar.PNG" data-holder-rendered="true" style="width: 400px; height: 400px;">
+          </p>
+          <p><a class="btn btn-default" href="http:sage2rtt.evl.uic.edu:8080" role="button" target="_blank"> Visualize &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Redwood Bark</h2>
+          <p>
+          	<img class="img-thumbnail" alt="static image data" src="./images/redwood.PNG" data-holder-rendered="true" style="width: 400px; height: 400px;">
+
+          </p>
+          <p><a class="btn btn-default" href="http:sage2rtt.evl.uic.edu:8080" role="button" target="_blank" > Visualize &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Dark matter </h2>
+          <p>
+          <img class="img-thumbnail" alt="static image data" src="./images/scivis.PNG" data-holder-rendered="true" style="width: 400px; height: 400px;">
+
+          </p>
+          <p><a class="btn btn-default" href="http:sage2rtt.evl.uic.edu:8080" role="button" target="_blank"> Visualize &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>Developers: Kitware folks, Shiwangi Singh, Kyle Almryde</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="./js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" type="./js/app.js"></script>
+  </body>
 </html>
