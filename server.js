@@ -60,11 +60,6 @@ function readFile(filename) {
         res.sendFile(__dirname + '/public/index.html');
     });
 
-    // Exract need to regenerate the Elevation data
-    app.get('/control', (req, res) => {
-        res.sendFile(__dirname + '/public/control.html');
-    });
-
     // not sure what this does
     app.get(/^(.+)$/, (req, res) => {
         res.sendFile(__dirname + '/public/' + req.params[0]);
@@ -81,8 +76,13 @@ function readFile(filename) {
 
 
     io.on('connection', socket => {
+        socket.on("hello", () => {
+            socket.emit("hello", "the server")
+        })
 
         socket.on('client-ready', () => {
+            console.log("client is ready");
+
             let data = sh.ls("./data/*") // get list of all files in data dir
             console.log("getting data from data dir");
             socket.emit("server-images", {
