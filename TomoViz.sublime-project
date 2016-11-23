@@ -1,0 +1,64 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"name": "home",
+			"folder_exclude_patterns":
+			[
+				"data",
+				"visualizer"
+			],
+			"file_exclude_patterns":
+			[
+				"*.bmpr",
+				"*.sublime-project"
+			]
+		},
+
+		{
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/data"
+		},
+		{
+			"name": "TomoVis",
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/node_modules/pvw-visualizer"
+		},
+		{
+			"name": "TomoVis/bin",
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/node_modules/pvw-visualizer/bin"
+		},
+		{
+			"name": "TomoVis/dist",
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/node_modules/pvw-visualizer/dist"
+		},
+		{
+			"name": "TomoVis/server",
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/node_modules/pvw-visualizer/server"
+		},
+		{
+			"name": "TomoVis/src",
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/node_modules/pvw-visualizer/src"
+		},
+
+
+	],
+	"settings":
+	{
+		"file_exclude_patterns":
+		[
+			"*.meta*"
+		]
+	},
+	"syntax_override":
+	{
+		"\\.css":
+		[
+			"CSS"
+		],
+		"\\.js$":
+		[
+			"Babel",
+			"JavaScript (Babel)"
+		]
+	}
+}

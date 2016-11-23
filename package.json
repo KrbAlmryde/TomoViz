@@ -1,0 +1,17 @@
+{
+  "name": "tomoviz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kyle Almryde and Shiwangi Singh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "promise": "^7.1.1",
+    "socket.io": "^1.6.0",
+    "shelljs": "^0.7.5"
+  }
+}
