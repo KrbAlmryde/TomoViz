@@ -17,7 +17,6 @@ function generateContainer(data, pattern) {
     let div = d3.select(pattern)
     for(let i=0; i<data.length; i+=3) {
         let row = addRow(div)
-
         data.slice(i,i+3).map( img => {
             console.log("img",img);
             let imgURL = img.split("/public/")[1]
@@ -25,7 +24,10 @@ function generateContainer(data, pattern) {
             appendToRow(row, column(imgURL))
 
         })
+
     }
+    div.append('hr')
+    div.append('footer').append('p').html('Developers: Kitware folks, Shiwangi Singh, Kyle Almryde')
 }
 
 function addRow(container) {
