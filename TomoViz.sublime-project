@@ -17,27 +17,24 @@
 		},
 
 		{
-			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/data"
-		},
-		{
 			"name": "TomoVis",
-			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/node_modules/pvw-visualizer"
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/visualizer"
 		},
 		{
 			"name": "TomoVis/bin",
-			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/node_modules/pvw-visualizer/bin"
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/visualizer/bin"
 		},
 		{
 			"name": "TomoVis/dist",
-			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/node_modules/pvw-visualizer/dist"
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/visualizer/dist"
 		},
 		{
 			"name": "TomoVis/server",
-			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/node_modules/pvw-visualizer/server"
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/visualizer/server"
 		},
 		{
 			"name": "TomoVis/src",
-			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/node_modules/pvw-visualizer/src"
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/TomoViz/visualizer/src"
 		},
 
 

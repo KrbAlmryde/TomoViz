@@ -4,30 +4,86 @@
         socket = io();
 
     console.log("I am awaken");
-    socket.emit("hello", "the client")
-    socket.on("hello", d =>{
-        console.log("We got a hello from:", d);
-        socket.emit("client-ready", null)
-    })
+    socket.emit("client-ready", null);
+    socket.on("server-images", response => {
+        console.log("we got some data,", response);
+        generateContainer(response.data, "#viz");
 
-    socket.on("server-images", data => {
-        console.log("we got some data,", data);
-        let div = d3.select("div.container")
     })
 
 })()
 
+function generateContainer(data, pattern) {
+    let div = d3.select(pattern)
+    for(let i=0; i<data.length; i+=3) {
+        let row = addRow(div)
 
+        data.slice(i,i+3).map( img => {
+            console.log("img",img);
+            let imgURL = img.split("/public/")[1]
+            console.log("imgURL", imgURL);
+            appendToRow(row, column(imgURL))
 
-
-function generateImageButton() {
-
+        })
+    }
 }
+
+function addRow(container) {
+    return container.append('div')
+        .attr('class', 'row')
+}
+
+function appendToRow(row, col) {
+    row.node().appendChild( col.node() )
+}
+
+// g.evl.uic.edu:57880/wallcology/default/runs/portal/index2.html?broker=ltg.evl.uic.edu&app_id=wallcology&run_id=default&TYPE=teacher&INSTANCE=0#
+
+function column(img) {
+    /*------------------------------------------------------------------------*
+     *
+     *  Purpose: Generates a generic bootstrap col-MD, requires classing
+     *           Appends Image
+     *
+     *    Input:
+     *
+     *   Output: A detached d3.selection object containing the
+     *
+     *------------------------------------------------------------------------*/
+
+    // let name = img.split('.')[0].split('/')[1]
+    console.log("column", img);
+    let colMD4 = d3.select(document.createElement('div'))
+        .attr('class', 'col-md-4')
+        .attr('id', img)
+
+
+    // TODO: strip out image name
+    colMD4.append('h2')
+        .html(img) // img's name
+
+    colMD4.append('p')
+      .append('img')
+        .attr('class', 'img-thumbnail')
+        .attr('alt', 'Click '+img+' to view data')
+        .attr('src', img)
+        .attr("data-holder-rendered", true)
+        .style('width', '400px')
+        .style('height', '400px')
+        .on('click', ev => {
+            console.log("opening page with", img, "data!", "http://sage2rtt.evl.uic.edu:8080" );
+            window.open().location.replace("http://sage2rtt.evl.uic.edu:8080")
+
+        })
+    return colMD4
+
+
+} // End of column
 
 
 /*
-      <div class="row">
-        <div class="col-md-4">
+      <div class="row"> // The ROW
+        <div class="col-md-4"> // The COLUMN (4-1 wide)
           <h2>Agar</h2>
           <p>
           <img class="img-thumbnail" alt="static image data" src="./images/agar.PNG" data-holder-rendered="true" style="width: 400px; height: 400px;">
