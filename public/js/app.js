@@ -73,8 +73,10 @@ function column(img) {
         .style('width', '400px')
         .style('height', '400px')
         .on('click', ev => {
+            console.log("opening page with", img, "data!", "http://131.193.183.212:8008" );
             //console.log("opening page with", img, "data!", "http://sage2rtt.evl.uic.edu:8080" );
             //window.open().location.replace("http://sage2rtt.evl.uic.edu:8080")
+
             window.open().location.replace("http://131.193.183.212:8008")
 
         })
